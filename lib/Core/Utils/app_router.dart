@@ -5,7 +5,7 @@ abstract class AppRouter
 {
   static final router = GoRouter(
       routes: [
-        GoRoute(path: '/', builder: (context, state) => const IntroductionsView())
+        GoRoute(path: '/', builder: (context, state) => const IntroductionsView()),
       ]
   );
 }
