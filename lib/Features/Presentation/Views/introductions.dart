@@ -4,34 +4,9 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import '../../../Core/Utils/styles.dart';
 
-class IntroductionsView extends StatefulWidget
+class IntroductionsView extends StatelessWidget
 {
   const IntroductionsView({Key? key}) : super(key: key);
-
-  @override
-  State<IntroductionsView> createState() => _IntroductionsViewState();
-}
-
-class _IntroductionsViewState extends State<IntroductionsView>
-{
-  AssetImage? assetImage1;
-  AssetImage? assetImage2;
-
-  @override
-  void initState()
-  {
-    super.initState();
-    assetImage1 = const AssetImage('assets/images/free-photo-ramadan-kareem-eid-mubarak-old-fashioned-royal-elegant-lamp-with-mosque.jpg');
-    assetImage2 = const AssetImage('assets/images/duaa.jpg');
-  }
-
-  @override
-  void didChangeDependencies()
-  {
-    super.didChangeDependencies();
-    precacheImage(assetImage1!, context);
-    precacheImage(assetImage2!, context);
-  }
 
   @override
   Widget build(BuildContext context)
@@ -41,7 +16,10 @@ class _IntroductionsViewState extends State<IntroductionsView>
         body: IntroductionScreen(
           globalBackgroundColor: Colors.white30,
           animationDuration: 540,
-          onDone: (){},
+          onDone: ()
+          {
+
+          },
 
           nextStyle: Styles.styleOfIntroButtons,
           backStyle: Styles.styleOfIntroButtons,
