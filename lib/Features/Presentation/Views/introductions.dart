@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:quran_app/constants.dart';
 import '../../../Core/Utils/styles.dart';
 
 class IntroductionsView extends StatelessWidget
@@ -36,8 +37,8 @@ class IntroductionsView extends StatelessWidget
           dotsDecorator: DotsDecorator(
               size: const Size.square(8),
               activeSize: const Size(30, 8),
-              color: const Color(0xffA8DCD9),
-              activeColor: const Color(0xffFE5D9F),
+              color: blueColor,
+              activeColor: pinkColor,
               activeShape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)
               )
