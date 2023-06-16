@@ -10,3 +10,6 @@ Color offWhite = const Color(0xffFFC07F);
 Color earthYellow = const Color(0xffEEB868);
 Color chamoisee = const Color(0xffA47963);
 Color brown = const Color(0xff823200);
+Color papayaWhip = const Color(0xffFFEFD3);
+Color jasmine = const Color(0xffFCD581);
+Color ivonyWhite = const Color(0xffFFFFF2);

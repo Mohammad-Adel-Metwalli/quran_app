@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:quran_app/Features/Home/Presentation/Views/quran_fehres.dart';
 import 'package:quran_app/Features/Presentation/Views/introductions.dart';
 import 'package:quran_app/Features/Presentation/Views/splash_view.dart';
 
@@ -17,8 +18,26 @@ abstract class AppRouter
             pageBuilder: (context, state)
             {
               return CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const SplashView(),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child)
+                  {
+                    return FadeTransition(
+                        opacity: CurveTween(curve: Curves.bounceInOut).animate(animation),
+                        child: child
+                    );
+                  }
+                  );
+            }
+        ),
+
+        GoRoute(
+          path: '/quranFehres',
+          pageBuilder: (context, state)
+          {
+            return CustomTransitionPage(
                 key: state.pageKey,
-                child: const SplashView(),
+                child: const QuranFehres(),
                 transitionsBuilder: (context, animation, secondaryAnimation, child)
                 {
                   return FadeTransition(
@@ -26,9 +45,9 @@ abstract class AppRouter
                       child: child
                   );
                 }
-              );
-            }
-        ),
+            );
+          }
+        )
       ]
   );
 }
