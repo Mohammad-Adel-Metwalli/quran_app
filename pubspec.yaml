@@ -19,6 +19,7 @@ dependencies:
   quran: ^1.2.2
   avatar_glow: ^2.0.2
   flutter_zoom_drawer: any
+  flutter_img: ^0.1.0
 
 dev_dependencies:
   flutter_test:
