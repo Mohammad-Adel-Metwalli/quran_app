@@ -13,3 +13,5 @@ Color brown = const Color(0xff823200);
 Color papayaWhip = const Color(0xffFFEFD3);
 Color jasmine = const Color(0xffFCD581);
 Color ivonyWhite = const Color(0xffFFFFF2);
+Color spaceCadit = const Color(0xff192A51);
+Color lavenderBlush = const Color(0xffF5E6E8);

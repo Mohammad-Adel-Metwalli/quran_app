@@ -17,7 +17,7 @@ class IntroductionsBody extends StatelessWidget
       animationDuration: 540,
       onDone: ()
       {
-        GoRouter.of(context).push('/splashView');
+        GoRouter.of(context).replace('/splashView');
       },
 
       nextStyle: Styles.styleOfIntroButtons,
