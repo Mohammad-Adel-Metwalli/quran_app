@@ -21,6 +21,7 @@ class CustomAppBarImage extends StatelessWidget
           backgroundColor: lightBrown,
           radius: 25,
           child: CircleAvatar(
+            backgroundColor: Colors.white,
             radius: 20,
             backgroundImage: CachedNetworkImageProvider(imageUrl),
           ),

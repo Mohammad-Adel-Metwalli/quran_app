@@ -30,7 +30,7 @@ class AzkarItems extends StatelessWidget
         SizedBox(height: 15),
         
         Text(
-            'قال رسول الله صلى الله عليه وسلم: يقول الله عز وجل أنا عند ظن عبدي بي، وأنا معه حين يذكرني إن ذكرني في نفسه ذكرته في نفسي، وإن ذكرني في ملأ ذكرته في ملأ هم خير منهم\n (الحديث رواه مسلم وغيره)',
+            'قال رسول الله صلَّ الله عليه وسلم: يقول الله عز وجل أنا عند ظن عبدي بي، وأنا معه حين يذكرني إن ذكرني في نفسه ذكرته في نفسي، وإن ذكرني في ملأ ذكرته في ملأ هم خير منهم\n (الحديث رواه مسلم وغيره)',
             maxLines: 8,
             textAlign: TextAlign.center,
             style: Styles.styleOfAzkarText20White,
@@ -50,7 +50,7 @@ class AzkarItems extends StatelessWidget
 
         SizedBox(height: 15),
 
-        AzkarCard(image: 'assets/images/Moslem-Hat-Ramadan.png', azkar:'أَذكَارُ ما بعد الصَّلاة'),
+        AzkarCard(image: 'assets/images/Moslem-Hat-Ramadan.png', azkar:'أَذكَارُ مَا بَعدَ الصَّلاة'),
 
         SizedBox(height: 15),
 

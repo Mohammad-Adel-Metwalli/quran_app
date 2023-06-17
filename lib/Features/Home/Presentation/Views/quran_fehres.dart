@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:quran_app/Features/Home/Presentation/Views/Widgets/quran_fehres_body.dart';
 import '../../../../constants.dart';
-import 'Widgets/azkar_of_muslim.dart';
+import 'azkar_of_muslim.dart';
 
 class QuranFehres extends StatefulWidget
 {
@@ -25,9 +25,7 @@ class _QuranFehresState extends State<QuranFehres>
         body: ZoomDrawer(
             controller: drawerController,
             style: DrawerStyle.style1,
-
             menuScreen: const AzkarOfMuslim(),
-
             moveMenuScreen: false,
             mainScreen: const QuranFehresBody(),
             borderRadius: 24,

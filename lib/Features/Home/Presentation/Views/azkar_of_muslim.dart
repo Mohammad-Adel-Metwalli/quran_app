@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/Features/Home/Presentation/Views/Widgets/azkar_items.dart';
-import '../../../../../constants.dart';
+import '../../../../constants.dart';
 
 class AzkarOfMuslim extends StatelessWidget
 {
