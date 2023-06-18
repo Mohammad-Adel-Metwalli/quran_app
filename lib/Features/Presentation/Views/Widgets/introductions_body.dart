@@ -26,7 +26,7 @@ class IntroductionsBody extends StatelessWidget
 
       back: const Text('السَّابق', style: Styles.styleOfIntroTextWhite),
       done: const Text('اقرأ و ارتقِ', style: Styles.styleOfIntroTextWhite),
-      next: const Text('التَّـالي', style: Styles.styleOfIntroText),
+      next: const Text('التَّـالي', style: Styles.styleOfIntroTextWhite),
 
       showDoneButton: true,
       showNextButton: true,
@@ -48,7 +48,7 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://img.freepik.com/free-photo/free-photo-ramadan-kareem-eid-mubarak-old-fashioned-royal-elegant-lamp-with-mosque_1340-23562.jpg?w=1060&t=st=1686493250~exp=1686493850~hmac=d342f6d829a14b5a9cbfeace6ff7bb4eaacdd88fcf373154472c29a0b2a70188'),
+            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/61921/screenshots/5839030/attachments/1258280/em-dark-large.png?compress=1&resize=800x600&vertical=center'),
 
             titleWidget: const Text('﴾بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِِ﴿', style: Styles.styleOfIntroTextWhite),
 
@@ -60,11 +60,11 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://img.freepik.com/free-photo/teenage-girl-with-praying-peace-hope-dreams-concept_1150-9114.jpg?w=1060&t=st=1686493584~exp=1686494184~hmac=e502a7ca77b5b5f51b1d31323b153592fcc1b4fc8cc9b747eefb64ed2fb42744'),
+            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/305148/screenshots/3692877/media/d7c0f10abe88934ac768c01a799c08eb.jpg?compress=1&resize=400x300&vertical=center'),
 
-            titleWidget: const Text(':قال رسول الله صلَّ الله عليه و سلم', style: Styles.styleOfIntroTextWhite),
+            titleWidget: const Text(':قال رسول الله صلَّ الله عليه و سلم', style: Styles.styleOfIntroText),
 
-            bodyWidget: const Text('(اقرؤوا القرآن فإنه يأتي يوم القيامة شفيعاً لأصحابه)\nصحيح مسلم', style: Styles.styleOfIntroTextWhite, textAlign: TextAlign.center)
+            bodyWidget: const Text('(اقرؤوا القرآن فإنه يأتي يوم القيامة شفيعاً لأصحابه)\nصحيح مسلم', style: Styles.styleOfIntroText, textAlign: TextAlign.center)
         )
       ],
     );

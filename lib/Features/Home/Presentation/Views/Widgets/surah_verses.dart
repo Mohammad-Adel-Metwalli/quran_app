@@ -25,6 +25,15 @@ class SurahVerses extends StatelessWidget
         child: ListTile(
           title: Column(
             children: [
+              SizedBox(height: quran.getSurahNameArabic(surahNumber) != 'الفاتحة' && quran.getSurahNameArabic(surahNumber) != 'التوبة' && verseNumber == 1 ? 8 : 15),
+
+              if(verseNumber == 1 && quran.getSurahNameArabic(surahNumber) != 'الفاتحة' && quran.getSurahNameArabic(surahNumber) != 'التوبة')
+                const Text(quran.basmala, style: Styles.styleOfBasmala25),
+
+              if(verseNumber == 1 && quran.getSurahNameArabic(surahNumber) != 'الفاتحة' && quran.getSurahNameArabic(surahNumber) != 'التوبة')
+                const SizedBox(height: 20),
+
+
               Text(
                 quran.getVerse(surahNumber, verseNumber, verseEndSymbol: true),
                 textDirection: TextDirection.rtl,

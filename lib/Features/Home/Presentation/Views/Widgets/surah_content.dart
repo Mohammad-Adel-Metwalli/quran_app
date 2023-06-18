@@ -7,7 +7,6 @@ class SurahContent extends StatelessWidget
   const SurahContent({Key? key, required this.surahNumber}) : super(key: key);
   final int surahNumber;
 
-
   @override
   Widget build(BuildContext context)
   {
