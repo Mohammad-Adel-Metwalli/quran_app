@@ -48,7 +48,7 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/61921/screenshots/5839030/attachments/1258280/em-dark-large.png?compress=1&resize=800x600&vertical=center'),
+            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/10997312/screenshots/20330041/media/b5990f81035eeeee40e379d4fc043dc6.png?compress=1&resize=1000x750&vertical=center'),
 
             titleWidget: const Text('﴾بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِِ﴿', style: Styles.styleOfIntroTextWhite),
 
@@ -60,11 +60,11 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/305148/screenshots/3692877/media/d7c0f10abe88934ac768c01a799c08eb.jpg?compress=1&resize=400x300&vertical=center'),
+            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/userupload/6145681/file/original-2d8b46eff642c725fedfd32c4abc05a5.jpg?compress=1&resize=1200x1500'),
 
-            titleWidget: const Text(':قال رسول الله صلَّ الله عليه و سلم', style: Styles.styleOfIntroText),
+            titleWidget: const Text(':قال رسول الله صلَّ الله عليه و سلم', style: Styles.styleOfIntroTextWhite),
 
-            bodyWidget: const Text('(اقرؤوا القرآن فإنه يأتي يوم القيامة شفيعاً لأصحابه)\nصحيح مسلم', style: Styles.styleOfIntroText, textAlign: TextAlign.center)
+            bodyWidget: const Text('(اقرؤوا القرآن فإنه يأتي يوم القيامة شفيعاً لأصحابه)\nصحيح مسلم', style: Styles.styleOfIntroTextWhite, textAlign: TextAlign.center)
         )
       ],
     );
