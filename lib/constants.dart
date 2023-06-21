@@ -16,3 +16,6 @@ Color ivonyWhite = const Color(0xffFFFFF2);
 Color spaceCadit = const Color(0xff192A51);
 Color lavenderBlush = const Color(0xffF5E6E8);
 Color slightOffWhite = const Color(0xffffcf9f);
+Color fawn = const Color(0xffE6AA68);
+Color zaffre = const Color(0xff3626A7);
+Color officeGreen = const Color(0xff157F1F);

@@ -11,7 +11,7 @@ abstract class AppRouter
       routes: [
         GoRoute(
             path: '/',
-            builder: (context, state) => const IntroductionsView()
+            builder: (context, state) => 5 != 5 ? const IntroductionsView() : const SplashView()
         ),
 
         GoRoute(

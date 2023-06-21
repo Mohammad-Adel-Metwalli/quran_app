@@ -10,7 +10,7 @@ class QuranFehresListView extends StatelessWidget
   Widget build(BuildContext context)
   {
     return ListView.builder(
-        padding: const EdgeInsets.only(top: 105),
+        padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.115),
         physics: const BouncingScrollPhysics(),
         itemCount: quran.totalSurahCount,
         itemBuilder: (context, index)
