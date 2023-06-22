@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_img/flutter_img.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../Core/Utils/styles.dart';
@@ -28,6 +29,12 @@ class CustomTasbeehAppBarBody extends StatelessWidget
           ),
 
           const Spacer(flex: 12),
+
+          const Img(
+            'assets/images/Prayer-Beads-Ramadan.png',
+            height: 50,
+            width: 50
+          ),
 
           const Text('التَّسْبِيح', style: Styles.styleOfIntroText20),
 

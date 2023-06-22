@@ -24,7 +24,7 @@ class _TasbeehBodyState extends State<TasbeehBody>
         const CustomTasbeehAppBar(),
 
         SizedBox(
-          height: MediaQuery.sizeOf(context).height * 0.04,
+          height: MediaQuery.sizeOf(context).height * 0.02,
         ),
 
         Center(
@@ -34,7 +34,7 @@ class _TasbeehBodyState extends State<TasbeehBody>
                 'عن أبي هريرة رضي الله عنه قال قال رسول الله - صلَّ الله عليه وسلم:\n ( كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ ثَقِيلَتَانِ فِي الْمِيزَانِ حَبِيبَتَانِ إِلَى الرَّحْمَنِ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ )\n رواه البخاري',
                 textDirection: TextDirection.rtl,
                 textAlign: TextAlign.center,
-                style: Styles.styleOfIntroText,
+                style: Styles.styleOfTasbeeh20,
               ),
 
               const Img('assets/images/Prayer-Beads-Ramadan.png', width: 150, height: 150),
