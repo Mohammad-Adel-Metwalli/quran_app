@@ -4,6 +4,7 @@ import 'package:quran_app/Features/Home/Presentation/Views/quran_fehres.dart';
 import 'package:quran_app/Features/Home/Presentation/Views/read_surah.dart';
 import 'package:quran_app/Features/Presentation/Views/introductions.dart';
 import 'package:quran_app/Features/Presentation/Views/splash_view.dart';
+import 'package:quran_app/Features/Tasbeeh/Presentation/Views/tasbeeh.dart';
 
 abstract class AppRouter
 {
@@ -57,6 +58,24 @@ abstract class AppRouter
               return CustomTransitionPage(
                   key: state.pageKey,
                   child: ReadSurah(surahNumber: state.extra as int),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child)
+                  {
+                    return FadeTransition(
+                        opacity: CurveTween(curve: Curves.bounceInOut).animate(animation),
+                        child: child
+                    );
+                  }
+              );
+            }
+        ),
+
+        GoRoute(
+            path: '/tasbeeh',
+            pageBuilder: (context, state)
+            {
+              return CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const Tasbeeh(),
                   transitionsBuilder: (context, animation, secondaryAnimation, child)
                   {
                     return FadeTransition(
