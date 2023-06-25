@@ -40,7 +40,14 @@ class AzkarItems extends StatelessWidget
 
         const SizedBox(height: 40),
 
-        const AzkarCard(image: 'assets/images/Iftar-Time-Ramadan.png', azkar:'أَذكَارُ الصَّبَاح'),
+        GestureDetector(
+            onTap: ()
+            {
+              ZoomDrawer.of(context)?.close();
+              GoRouter.of(context).push('/morningAzkar');
+            },
+            child: const AzkarCard(image: 'assets/images/Iftar-Time-Ramadan.png', azkar:'أَذكَارُ الصَّبَاح')
+        ),
 
         const SizedBox(height: 15),
 

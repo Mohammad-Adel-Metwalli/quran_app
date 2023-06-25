@@ -19,3 +19,5 @@ Color slightOffWhite = const Color(0xffffcf9f);
 Color fawn = const Color(0xffE6AA68);
 Color zaffre = const Color(0xff3626A7);
 Color officeGreen = const Color(0xff157F1F);
+Color burntUmber = const Color(0xff8C271E);
+Color ghostWhite = const Color(0xffFFFAFF);

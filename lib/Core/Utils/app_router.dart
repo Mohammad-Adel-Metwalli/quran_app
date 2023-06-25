@@ -5,6 +5,7 @@ import 'package:quran_app/Features/Home/Presentation/Views/read_surah.dart';
 import 'package:quran_app/Features/Presentation/Views/introductions.dart';
 import 'package:quran_app/Features/Presentation/Views/splash_view.dart';
 import 'package:quran_app/Features/Tasbeeh/Presentation/Views/tasbeeh.dart';
+import '../../Features/Morning/Presentation/Views/morning_azkar.dart';
 
 abstract class AppRouter
 {
@@ -76,6 +77,24 @@ abstract class AppRouter
               return CustomTransitionPage(
                   key: state.pageKey,
                   child: const Tasbeeh(),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child)
+                  {
+                    return FadeTransition(
+                        opacity: CurveTween(curve: Curves.bounceInOut).animate(animation),
+                        child: child
+                    );
+                  }
+              );
+            }
+        ),
+
+        GoRoute(
+            path: '/morningAzkar',
+            pageBuilder: (context, state)
+            {
+              return CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const MorningAzkar(),
                   transitionsBuilder: (context, animation, secondaryAnimation, child)
                   {
                     return FadeTransition(

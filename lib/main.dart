@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:quran_app/Core/Utils/app_router.dart';
 import 'package:quran_app/Core/Utils/assets.dart';
 
-void main()
+void main() async
 {
+  await Hive.initFlutter();
+  await Hive.openBox('QuranApp');
+  await Hive.openBox('Azkar');
+
   runApp(const QuranApp());
 }
 

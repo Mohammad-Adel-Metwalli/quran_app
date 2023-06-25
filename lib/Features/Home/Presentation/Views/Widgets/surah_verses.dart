@@ -1,4 +1,6 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:quran/quran.dart' as quran;
 import 'package:quran_app/constants.dart';
 import '../../../../../Core/Utils/styles.dart';
@@ -20,6 +22,8 @@ class SurahVerses extends StatefulWidget
 
 class _SurahVersesState extends State<SurahVerses>
 {
+  final _boxVerses = Hive.box('QuranApp');
+
   @override
   Widget build(BuildContext context)
   {
@@ -56,21 +60,81 @@ class _SurahVersesState extends State<SurahVerses>
                 child: GestureDetector(
                   onTap: ()
                   {
-                    if(SurahVerses.added == false)
+                    if(_boxVerses.get(widget.surahNumber) == null)
                     {
-                      SurahVerses.added = true;
-                      setState(() {
+                      AwesomeDialog(
+                        context: context,
+                        animType: AnimType.scale,
+                        dialogType: DialogType.question,
 
-                      });
+                        body: const Center(
+                            child: Text('هل تريد تغيير مكان العلامة؟', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold))
+                        ),
+
+                        btnOk: GestureDetector(
+                          onTap: ()
+                          {
+                            _boxVerses.put(widget.surahNumber, widget.verseNumber);
+                            SurahVerses.added = true;
+                            setState(() {});
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(12.5)),
+                            child: const Center(child: Text('أجل أريد', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold, color: Colors.white))),
+                          ),
+                        ),
+
+                        btnCancel: GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(12.5)),
+                            child: const Center(child: Text('لا أريد', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold, color: Colors.white))),
+                          ),
+                        ),
+                      ).show();
                     }
 
                     else
                     {
-                      SurahVerses.added = false;
-                      setState(() {
+                      AwesomeDialog(
+                        context: context,
+                        animType: AnimType.scale,
+                        dialogType: DialogType.question,
 
-                      });
+                        body: const Center(
+                            child: Text('هل تريد تغيير مكان العلامة؟', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold))
+                        ),
+
+                        btnOk: GestureDetector(
+                          onTap: ()
+                          {
+                            _boxVerses.delete(widget.surahNumber);
+                            _boxVerses.put(widget.surahNumber, widget.verseNumber);
+                            SurahVerses.added = true;
+                            setState(() {});
+                            Navigator.pop(context);
+                          },
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(12.5)),
+                            child: const Center(child: Text('أجل أريد', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold, color: Colors.white))),
+                          ),
+                        ),
+
+                        btnCancel: GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(12.5)),
+                            child: const Center(child: Text('لا أريد', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold, color: Colors.white))),
+                          ),
+                        ),
+                      ).show();
                     }
+                    setState(() {});
                   },
                   child: Container(
                     height: 50,
@@ -85,11 +149,11 @@ class _SurahVersesState extends State<SurahVerses>
                         const Spacer(),
 
                         Icon(
-                            SurahVerses.added == false ? Icons.bookmark_add : Icons.bookmark_added,
-                            color: SurahVerses.added == false ? zaffre : officeGreen,
+                            _boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true? Icons.bookmark_added : Icons.bookmark_add,
+                            color: _boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true? officeGreen : zaffre,
                         ),
 
-                        Text(SurahVerses.added == false ? 'حِفظ العَلامَة' : 'حُفِظَت العَلامَة', style: Styles.styleOfBookMarkText),
+                        Text(_boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true ? 'حُفِظَت العَلامَة' : 'حِفظ العَلامَة', style: Styles.styleOfBookMarkText),
 
                         const Spacer()
                       ],

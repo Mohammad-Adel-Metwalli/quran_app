@@ -36,7 +36,11 @@ class QuranFehresListViewItem extends StatelessWidget
 
               QuranFehresMaccaAndMadinaImages(surahType: quran.getPlaceOfRevelation(surahNumber)),
 
-              Text('آياتها ${quran.getVerseCount(surahNumber).toString()}', style: Styles.styleOfIntroText),
+              Text(quran.getVerseCount(surahNumber).toString(), style: Styles.styleOfVersesNumber),
+
+              const SizedBox(width: 6),
+
+              const Text('آياتها', style: Styles.styleOfVersesText),
 
               const Spacer(flex: 5),
 
