@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:hive/hive.dart';
 import 'package:quran_app/Features/Home/Presentation/Views/quran_fehres.dart';
 import 'package:quran_app/Features/Home/Presentation/Views/read_surah.dart';
+import 'package:quran_app/Features/Masjed/Presentation/Views/masjed_azkar.dart';
 import 'package:quran_app/Features/Night/Presentation/Views/night_azkar.dart';
 import 'package:quran_app/Features/Presentation/Views/introductions.dart';
 import 'package:quran_app/Features/Presentation/Views/splash_view.dart';
@@ -128,6 +129,24 @@ abstract class AppRouter
               return CustomTransitionPage(
                   key: state.pageKey,
                   child: const NightAzkar(),
+                  transitionsBuilder: (context, animation, secondaryAnimation, child)
+                  {
+                    return FadeTransition(
+                        opacity: CurveTween(curve: Curves.bounceInOut).animate(animation),
+                        child: child
+                    );
+                  }
+              );
+            }
+        ),
+
+        GoRoute(
+            path: '/masjedAzkar',
+            pageBuilder: (context, state)
+            {
+              return CustomTransitionPage(
+                  key: state.pageKey,
+                  child: const MasjedAzkar(),
                   transitionsBuilder: (context, animation, secondaryAnimation, child)
                   {
                     return FadeTransition(
