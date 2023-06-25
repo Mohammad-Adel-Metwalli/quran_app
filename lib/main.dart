@@ -8,6 +8,7 @@ void main() async
   await Hive.initFlutter();
   await Hive.openBox('QuranApp');
   await Hive.openBox('Azkar');
+  await Hive.openBox('Visited');
 
   runApp(const QuranApp());
 }

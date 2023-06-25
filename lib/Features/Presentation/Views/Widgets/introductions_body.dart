@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive/hive.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:quran_app/Features/Presentation/Views/Widgets/introductions_cached_image.dart';
 import '../../../../Core/Utils/styles.dart';
@@ -17,6 +18,9 @@ class IntroductionsBody extends StatelessWidget
       animationDuration: 540,
       onDone: ()
       {
+        final visitedBox = Hive.box('Visited');
+        visitedBox.put('user', true);
+
         GoRouter.of(context).replace('/splashView');
       },
 

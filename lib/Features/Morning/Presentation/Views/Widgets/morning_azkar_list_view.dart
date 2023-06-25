@@ -10,7 +10,8 @@ class MorningAzkarListView extends StatefulWidget
   State<MorningAzkarListView> createState() => _MorningAzkarListViewState();
 }
 
-class _MorningAzkarListViewState extends State<MorningAzkarListView> {
+class _MorningAzkarListViewState extends State<MorningAzkarListView>
+{
   @override
   Widget build(BuildContext context)
   {

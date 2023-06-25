@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive/hive.dart';
-import 'package:quran_app/Core/Utils/assets.dart';
-import 'package:quran_app/Core/Utils/styles.dart';
+import '../../../../../Core/Utils/assets.dart';
+import '../../../../../Core/Utils/styles.dart';
 import '../../../../../constants.dart';
 
-class MorningAzkarListViewItems extends StatefulWidget
+class NightAzkarListViewItems extends StatefulWidget
 {
-  const MorningAzkarListViewItems({super.key, required this.index});
+  const NightAzkarListViewItems({super.key, required this.index});
   final int index;
 
   @override
-  State<MorningAzkarListViewItems> createState() => _MorningAzkarListViewItemsState();
+  State<NightAzkarListViewItems> createState() => _NightAzkarListViewItemsState();
 }
 
-class _MorningAzkarListViewItemsState extends State<MorningAzkarListViewItems>
+class _NightAzkarListViewItemsState extends State<NightAzkarListViewItems>
 {
   late String zekr;
   late int zekrReputation;
@@ -25,8 +25,8 @@ class _MorningAzkarListViewItemsState extends State<MorningAzkarListViewItems>
   void initState()
   {
     super.initState();
-    zekr = AssetsData.morningAzkar[widget.index];
-    zekrReputation = AssetsData.morningAzkarReputation[widget.index];
+    zekr = AssetsData.nightAzkar[widget.index];
+    zekrReputation = AssetsData.nightAzkarReputation[widget.index];
     theIndex = widget.index;
   }
 
