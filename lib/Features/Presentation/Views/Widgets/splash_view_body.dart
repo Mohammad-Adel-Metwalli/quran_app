@@ -23,23 +23,25 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   Widget build(BuildContext context)
   {
-    return const Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(top: 300),
-          child: Center(child: SplashViewImage()),
-        ),
+    return const Center(
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: 300),
+            child: Center(child: SplashViewImage()),
+          ),
 
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 15),
-          child: SplashViewCustomedText(),
-        ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 15),
+            child: SplashViewCustomedText(),
+          ),
 
-        Padding(
-          padding: EdgeInsets.only(top: 1),
-          child: SplashViewLoadingIndicator(),
-        )
-      ],
+          Padding(
+            padding: EdgeInsets.only(top: 1),
+            child: SplashViewLoadingIndicator(),
+          )
+        ],
+      ),
     );
   }
 }

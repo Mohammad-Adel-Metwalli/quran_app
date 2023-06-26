@@ -10,7 +10,7 @@ class CustomMasjedAzkarAppBar extends StatelessWidget
   Widget build(BuildContext context)
   {
     return Container(
-      height: 100,
+      height: MediaQuery.sizeOf(context).height * 0.110,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.vertical(bottom: Radius.circular(30)),
         gradient: LinearGradient(
