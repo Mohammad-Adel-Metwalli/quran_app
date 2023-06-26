@@ -15,6 +15,7 @@ class SurahVerses extends StatefulWidget
   final int surahNumber;
   final int verseNumber;
   static bool added = false;
+  static bool removed = true;
 
   @override
   State<SurahVerses> createState() => _SurahVersesState();
