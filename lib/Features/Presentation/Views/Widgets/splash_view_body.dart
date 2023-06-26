@@ -3,9 +3,22 @@ import 'package:quran_app/Features/Presentation/Views/Widgets/splash_view_custom
 import 'package:quran_app/Features/Presentation/Views/Widgets/splash_view_image.dart';
 import 'package:quran_app/Features/Presentation/Views/Widgets/splash_view_loading_indicator.dart';
 
-class SplashViewBody extends StatelessWidget
+class SplashViewBody extends StatefulWidget
 {
   const SplashViewBody({Key? key}) : super(key: key);
+
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody>
+{
+  @override
+  void didChangeDependencies()
+  {
+    super.didChangeDependencies();
+    precacheImage(const AssetImage('assets/images/Quran logo.png'), context);
+  }
 
   @override
   Widget build(BuildContext context)
