@@ -12,7 +12,7 @@ class IntroductionsCachedImage extends StatelessWidget
     return Img(
       imageUrl,
       fit: BoxFit.fitHeight,
-      height: 900,
+      height: MediaQuery.sizeOf(context).height,
       width: double.infinity,
     );
   }
