@@ -15,7 +15,7 @@ class _MasjedAzkarBodyState extends State<MasjedAzkarBody>
   @override
   Widget build(BuildContext context)
   {
-    return  const Stack(
+    return const Stack(
       children: [
         MasjedAzkarListView(),
 
