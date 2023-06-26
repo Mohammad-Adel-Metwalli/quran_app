@@ -6,9 +6,23 @@ import 'package:quran_app/Features/Presentation/Views/Widgets/introductions_cach
 import '../../../../Core/Utils/styles.dart';
 import '../../../../constants.dart';
 
-class IntroductionsBody extends StatelessWidget
+class IntroductionsBody extends StatefulWidget
 {
   const IntroductionsBody({Key? key}) : super(key: key);
+
+  @override
+  State<IntroductionsBody> createState() => _IntroductionsBodyState();
+}
+
+class _IntroductionsBodyState extends State<IntroductionsBody>
+{
+  @override
+  void didChangeDependencies()
+  {
+    super.didChangeDependencies();
+    precacheImage(const AssetImage('assets/images/1st introduction image.png'), context);
+    precacheImage(const AssetImage('assets/images/2nd introduction image.png'), context);
+  }
 
   @override
   Widget build(BuildContext context)
@@ -52,7 +66,7 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/users/10997312/screenshots/20330041/media/b5990f81035eeeee40e379d4fc043dc6.png?compress=1&resize=1000x750&vertical=center'),
+            image: const IntroductionsCachedImage(imageUrl: 'assets/images/1st introduction image.png'),
 
             titleWidget: const Text('﴾بِسْمِ اللهِ الرَّحْمنِ الرَّحِيمِِ﴿', style: Styles.styleOfIntroTextWhite),
 
@@ -64,7 +78,7 @@ class IntroductionsBody extends StatelessWidget
               fullScreen: true,
             ),
 
-            image: const IntroductionsCachedImage(imageUrl: 'https://cdn.dribbble.com/userupload/6145681/file/original-2d8b46eff642c725fedfd32c4abc05a5.jpg?compress=1&resize=1200x1500'),
+            image: const IntroductionsCachedImage(imageUrl: 'assets/images/2nd introduction image.png'),
 
             titleWidget: const Text(':قال رسول الله صلَّ الله عليه و سلم', style: Styles.styleOfIntroTextWhite),
 

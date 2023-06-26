@@ -1,5 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_img/flutter_img.dart';
 
 class IntroductionsCachedImage extends StatelessWidget
 {
@@ -9,8 +9,8 @@ class IntroductionsCachedImage extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return CachedNetworkImage(
-      imageUrl: imageUrl,
+    return Img(
+      imageUrl,
       fit: BoxFit.fitHeight,
       height: 900,
       width: double.infinity,
