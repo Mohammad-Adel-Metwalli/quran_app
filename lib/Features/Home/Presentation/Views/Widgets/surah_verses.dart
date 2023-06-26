@@ -114,7 +114,6 @@ class _SurahVersesState extends State<SurahVerses>
                           {
                             _boxVerses.delete(widget.surahNumber);
                             _boxVerses.put(widget.surahNumber, widget.verseNumber);
-                            SurahVerses.added = true;
                             setState(() {});
                             Navigator.pop(context);
                           },
@@ -150,8 +149,8 @@ class _SurahVersesState extends State<SurahVerses>
                         const Spacer(),
 
                         Icon(
-                            _boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true? Icons.bookmark_added : Icons.bookmark_add,
-                            color: _boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true? officeGreen : zaffre,
+                            _boxVerses.get(widget.surahNumber) == widget.verseNumber ? Icons.bookmark_added : Icons.bookmark_add,
+                            color: _boxVerses.get(widget.surahNumber) == widget.verseNumber ? officeGreen : zaffre,
                         ),
 
                         Text(_boxVerses.get(widget.surahNumber) == widget.verseNumber && SurahVerses.added == true ? 'حُفِظَت العَلامَة' : 'حِفظ العَلامَة', style: Styles.styleOfBookMarkText),
