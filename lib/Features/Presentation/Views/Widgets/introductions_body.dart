@@ -63,6 +63,8 @@ class _IntroductionsBodyState extends State<IntroductionsBody>
       pages: [
         PageViewModel(
             decoration: const PageDecoration(
+              imageAlignment: Alignment.center,
+              imagePadding: EdgeInsets.zero,
               fullScreen: true,
             ),
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_img/flutter_img.dart';
 
 class IntroductionsCachedImage extends StatelessWidget
 {
@@ -9,10 +8,10 @@ class IntroductionsCachedImage extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Img(
+    return Image.asset(
       imageUrl,
-      fit: BoxFit.fitHeight,
-      height: MediaQuery.sizeOf(context).height,
+      fit: BoxFit.cover,
+      height: double.infinity,
       width: double.infinity,
     );
   }
