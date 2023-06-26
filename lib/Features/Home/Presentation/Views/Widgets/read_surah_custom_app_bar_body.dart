@@ -33,7 +33,7 @@ class ReadSurahCustomAppBarBody extends StatelessWidget
 
           const Spacer(flex: 10),
 
-          const CustomAppBarImage(imageUrl: 'https://img.freepik.com/free-photo/lamp-mat-near-quran_23-2147868927.jpg?w=1060&t=st=1686923530~exp=1686924130~hmac=6e0848209fb6d1423d1263dda98f6135223345067ce47feb8bbca3b77069c567'),
+          const CustomAppBarImage(),
 
           SizedBox(width: MediaQuery.of(context).size.width * 0.025),
         ],

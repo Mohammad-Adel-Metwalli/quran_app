@@ -1,12 +1,23 @@
 import 'package:avatar_glow/avatar_glow.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:quran_app/constants.dart';
 
-class CustomAppBarImage extends StatelessWidget
+class CustomAppBarImage extends StatefulWidget
 {
-  const CustomAppBarImage({Key? key, required this.imageUrl}) : super(key: key);
-  final String imageUrl;
+  const CustomAppBarImage({Key? key,}) : super(key: key);
+
+  @override
+  State<CustomAppBarImage> createState() => _CustomAppBarImageState();
+}
+
+class _CustomAppBarImageState extends State<CustomAppBarImage>
+{
+  @override
+  void didChangeDependencies()
+  {
+    super.didChangeDependencies();
+    precacheImage(const AssetImage('assets/images/Quran logo avatar.png'), context);
+  }
 
   @override
   Widget build(BuildContext context)
@@ -20,10 +31,10 @@ class CustomAppBarImage extends StatelessWidget
         child: CircleAvatar(
           backgroundColor: lightBrown,
           radius: 25,
-          child: CircleAvatar(
+          child: const CircleAvatar(
             backgroundColor: Colors.white,
             radius: 20,
-            backgroundImage: CachedNetworkImageProvider(imageUrl),
+            backgroundImage: AssetImage('assets/images/Quran logo avatar.png'),
           ),
         ),
       ),
