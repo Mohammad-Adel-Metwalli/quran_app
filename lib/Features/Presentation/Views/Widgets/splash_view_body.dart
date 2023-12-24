@@ -25,23 +25,22 @@ class _SplashViewBodyState extends State<SplashViewBody>
   {
     return Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.sizeOf(context).height * 0.2),
-      child: const Center(
+      child: Center(
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.only(top: 300),
-              child: Center(child: SplashViewImage()),
-            ),
+            const Spacer(flex: 3),
 
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 15),
-              child: SplashViewCustomedText(),
-            ),
+            const Center(child: SplashViewImage()),
 
-            Padding(
-              padding: EdgeInsets.only(top: 1),
-              child: SplashViewLoadingIndicator(),
-            ),
+            SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
+
+            const SplashViewCustomedText(),
+
+            SizedBox(height: MediaQuery.sizeOf(context).height * 0.05),
+
+            const SplashViewLoadingIndicator(),
+
+            const Spacer(),
           ],
         ),
       ),
