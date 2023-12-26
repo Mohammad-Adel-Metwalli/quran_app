@@ -13,10 +13,7 @@ class QuranFehresListView extends StatelessWidget
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.115),
         physics: const BouncingScrollPhysics(),
         itemCount: quran.totalSurahCount,
-        itemBuilder: (context, index)
-        {
-          return QuranFehresListViewItem(surahNumber: index+1);
-        }
+        itemBuilder: (context, index) => QuranFehresListViewItem(surahNumber: index+1)
     );
   }
 }

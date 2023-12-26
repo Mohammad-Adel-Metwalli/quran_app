@@ -28,43 +28,27 @@ class _TasbeehListViewState extends State<TasbeehListView>
 
       const Img('assets/images/Prayer-Beads-Ramadan.png', width: 150, height: 150),
 
-      const SizedBox(
-        height: 5,
-      ),
+      const SizedBox(height: 5),
 
       const Center(child: Text('سُبحَانَ اللهِ وَ بِحَمدِه\nسُبحَانَ اللهِ العَظيمْ', style: Styles.styleOfIntroText20)),
 
-      const SizedBox(
-        height: 35,
-      ),
+      const SizedBox(height: 35),
 
       Center(child: Text('$tasbeeh', style: const TextStyle(fontSize: 50, fontFamily: 'Poppins'))),
 
-      const SizedBox(
-        height: 50,
-      ),
+      const SizedBox(height: 50),
 
       GestureDetector(
-        onTap: ()
-        {
-          ++tasbeeh;
-          setState(() {
-
-          });
-        },
-
+        onTap: () => setState(() => ++tasbeeh),
         child: const Center(child: TasbeehButton()),
       )
     ];
 
     return ListView.builder(
-        padding: EdgeInsets.only(top: MediaQuery.sizeOf(context).height * 0.115),
-        physics: const BouncingScrollPhysics(),
-        itemCount: tasbeehList.length,
-        itemBuilder: (context, index)
-        {
-          return tasbeehList[index];
-        }
+      padding: EdgeInsets.only(top: MediaQuery.sizeOf(context).height * 0.115),
+      itemBuilder: (context, index) => tasbeehList[index],
+      physics: const BouncingScrollPhysics(),
+      itemCount: tasbeehList.length,
     );
   }
 }

@@ -21,13 +21,7 @@ class _SplashViewLoadingIndicatorState extends State<SplashViewLoadingIndicator>
     navigateToHome();
   }
 
-  void navigateToHome()
-  {
-    Future.delayed(const Duration(milliseconds: 5000), ()
-    {
-      GoRouter.of(context).replace('/quranFehres');
-    });
-  }
+  void navigateToHome() => Future.delayed(const Duration(milliseconds: 5000), () => GoRouter.of(context).replace('/quranFehres'));
 
   @override
   Widget build(BuildContext context)

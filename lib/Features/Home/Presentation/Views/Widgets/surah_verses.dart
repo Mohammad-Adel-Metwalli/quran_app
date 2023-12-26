@@ -69,7 +69,7 @@ class _SurahVersesState extends State<SurahVerses>
                         dialogType: DialogType.question,
 
                         body: const Center(
-                            child: Text('هل تريد تغيير مكان العلامة؟', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold))
+                            child: Text('هل تريد وضع علامة؟', style: TextStyle(fontFamily: 'Noto Kufi Arabic', fontWeight: FontWeight.bold))
                         ),
 
                         btnOk: GestureDetector(

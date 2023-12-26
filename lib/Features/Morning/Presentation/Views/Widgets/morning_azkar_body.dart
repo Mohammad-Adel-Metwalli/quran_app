@@ -10,7 +10,8 @@ class MorningAzkarBody extends StatefulWidget
   State<MorningAzkarBody> createState() => _MorningAzkarBodyState();
 }
 
-class _MorningAzkarBodyState extends State<MorningAzkarBody> {
+class _MorningAzkarBodyState extends State<MorningAzkarBody>
+{
   @override
   Widget build(BuildContext context)
   {

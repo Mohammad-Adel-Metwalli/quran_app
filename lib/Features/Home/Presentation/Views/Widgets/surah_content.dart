@@ -43,10 +43,7 @@ class _SurahContentState extends State<SurahContent>
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.115),
         itemCount: quran.getVerseCount(widget.surahNumber),
-        itemBuilder: (context, index)
-        {
-          return SurahVerses(surahNumber: widget.surahNumber, verseNumber: index+1);
-        }
+        itemBuilder: (context, index) => SurahVerses(surahNumber: widget.surahNumber, verseNumber: index+1),
         );
   }
 }
