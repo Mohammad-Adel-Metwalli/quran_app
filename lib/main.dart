@@ -21,9 +21,10 @@ class QuranApp extends StatelessWidget
   Widget build(BuildContext context)
   {
     return MaterialApp.router(
-        routerConfig: AppRouter.router,
-        debugShowCheckedModeBanner: false,
-        theme: AssetsData.quranFont
+      title: 'Holy Quran - القرآن الكريم',
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
+      theme: AssetsData.quranFont,
     );
   }
 }

@@ -11,9 +11,9 @@ class AzkarOfMuslim extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Container(
-      decoration: BoxDecoration(color: spaceCadit,borderRadius: const BorderRadius.only(topRight: Radius.circular(16), bottomRight: Radius.circular(16)), border: Border.all(color: ghostWhite, width: 5)),
-      child: const AzkarItems(),
+    return Scaffold(
+      backgroundColor: spaceCadit,
+      body: const AzkarItems(),
     );
   }
 }

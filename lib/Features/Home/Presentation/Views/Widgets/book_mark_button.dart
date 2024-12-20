@@ -19,7 +19,7 @@ class BookMarkButton extends StatelessWidget
     return FloatingActionButton.extended(
         backgroundColor: zaffre,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17.5)),
-        icon: const Icon(CupertinoIcons.book),
+        icon: const Icon(CupertinoIcons.book, color: Colors.white),
         onPressed: () => SurahContent.scrollItem(boxVerses.get(SurahContent.surahNum)),
         label: const Text('إلى العَلامَة', style: Styles.styleOfFBA)
     );

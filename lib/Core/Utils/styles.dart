@@ -15,7 +15,7 @@ abstract class Styles
   static const styleOfAzkarText20White = TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.w500);
   static const styleOfBasmala25 = TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.w500);
   static const styleOfBookMarkText = TextStyle(color: Colors.black, fontWeight: FontWeight.w600);
-  static const styleOfFBA = TextStyle(fontSize: 13, fontWeight: FontWeight.w600 , fontFamily: AssetsData.arabicFont);
+  static const styleOfFBA = TextStyle(fontSize: 13, fontWeight: FontWeight.w600 , fontFamily: AssetsData.arabicFont, color: Colors.white);
   static const styleOfTasbeeh20 = TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.w500);
   static const styleOfVersesText = TextStyle(fontSize: 17.5, color: Colors.black, fontWeight: FontWeight.bold, fontFamily: AssetsData.arabicFont);
   static const styleOfVersesNumber = TextStyle(fontSize: 17.5, color: Colors.black, fontFamily: AssetsData.poppinsFont);

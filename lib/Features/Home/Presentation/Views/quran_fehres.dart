@@ -31,7 +31,7 @@ class _QuranFehresState extends State<QuranFehres>
             borderRadius: 24,
             angle: 0,
             showShadow: false,
-            slideWidth: MediaQuery.of(context).size.width * .75,
+            slideWidth: MediaQuery.sizeOf(context).width * 0.75,
             openCurve: Curves.fastOutSlowIn,
             closeCurve: Curves.bounceIn,
         ),

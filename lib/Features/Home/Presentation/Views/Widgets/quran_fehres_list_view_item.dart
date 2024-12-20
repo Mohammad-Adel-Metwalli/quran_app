@@ -44,7 +44,7 @@ class QuranFehresListViewItem extends StatelessWidget
 
               const Spacer(flex: 5),
 
-              Text(AssetsData.surahsInArabic[surahNumber-1].substring(7), style: Styles.styleOfIntroText20),
+              Text('سورة ${AssetsData.surahsInArabic[surahNumber-1].substring(7)}', style: Styles.styleOfIntroText20),
 
               const Spacer()
             ],
